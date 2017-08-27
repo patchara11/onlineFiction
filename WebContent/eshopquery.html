@@ -1,0 +1,38 @@
+
+<head>
+  <title>Yet Another e-Bookshop</title>
+</head>
+<body>
+  <h2>Yet Another e-Bookshop</h2>
+  <form id= "form0">
+   Choose an author:<br /><br />
+    <input type="checkbox" name="author" value="Tan Ah Teck" />Ah Teck
+    <input type="checkbox" name="author" value="Mohammad Ali" />Ali
+    <input type="checkbox" name="author" value="Kumar" />Kumar
+    <button id = "send" class = "btn btn-default" >Search</button>
+  </form>
+</body>
+<script>   
+
+$(document). ready(function(){
+	$("#send").click(function(event){debugger
+		event.preventDefault();
+		$.ajax({
+	         type: "GET",
+	         url: "/ebookshop/eshopquery",
+	         data: $('#form0').serialize(),
+	       //  contentType: false,
+	         success: function (data) {
+	             $("#content").html(data);
+	             $('.loading').hide();
+	            
+	         },
+	         error: function (xhr, status, error) {
+	             alert(xhr.responseText);
+	         }
+	     });
+	});
+	
+});
+      </script>  
+

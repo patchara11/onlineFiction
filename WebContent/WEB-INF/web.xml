@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="true" version="3.0">
+    
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EshopEditorServlet</servlet-name>
+    <servlet-class>EshopEditorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EshopEditorServlet</servlet-name>
+    <url-pattern>/editor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EBookShopQuery</servlet-name>
+    <servlet-class>QueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EBookShopQueryMultiValue</servlet-name>
+    <servlet-class>QueryMultiValueServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EBookShopQueryMultiParam</servlet-name>
+    <servlet-class>QueryMultiParamServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EBookShopQueryMultiParamValue</servlet-name>
+    <servlet-class>QueryMultiParamValueServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EBookShopQueryPost</servlet-name>
+    <servlet-class>QueryPostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EBookShopEshopQuery</servlet-name>
+    <servlet-class>EshopQueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EBookShopEshopOrder</servlet-name>
+    <servlet-class>EshopOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StoryAct</servlet-name>
+    <servlet-class>StoryActServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>EBookShopQuery</servlet-name>
+    <url-pattern>/query</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EBookShopQueryMultiValue</servlet-name>
+    <url-pattern>/querymv</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EBookShopQueryMultiParam</servlet-name>
+    <url-pattern>/querymp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EBookShopQueryPost</servlet-name>
+    <url-pattern>/querypost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EBookShopEshopQuery</servlet-name>
+    <url-pattern>/eshopquery</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EBookShopEshopOrder</servlet-name>
+    <url-pattern>/eshoporder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StoryAct</servlet-name>
+    <url-pattern>/storyact</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <description>For Report 1</description>
+    <servlet-name>JasperServlet</servlet-name>
+    <servlet-class>servlet.JasperServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JasperServlet</servlet-name>
+    <url-pattern>/JasperServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
+<!-- <?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="true" version="3.0">
+  <servlet>
+    <servlet-name>EBookShopQuery</servlet-name>
+    <servlet-class>QueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EBookShopQuery</servlet-name>
+    <url-pattern>/query</url-pattern>
+  </servlet-mapping>
+</web-app> -->

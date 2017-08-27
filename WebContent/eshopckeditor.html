@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yet Another e-Bookshop</title>
+  <script src="ckeditor/ckeditor.js"></script>
+</head>
+<body>
+  <h2>Yet Another e-Bookshop</h2>
+  <form id= "form7">
+    <textarea name="editor1" id="editor1" rows="10" cols="80">
+               
+    </textarea>
+    <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+     </script>
+    <button id = "send" class = "btn btn-default" >Search</button>
+  </form>
+</body>
+<!-- JavaScripts -->
+ 	<script src="http://www.tutorialspoint.com/bootstrap/scripts/jquery.min.js">
+        </script>
+ 	 <script src="http://www.tutorialspoint.com/bootstrap/js/bootstrap.min.js"></script>
+<script>   
+
+
+$(document). ready(function(){
+	$("#send").click(function(event){debugger
+		event.preventDefault();
+		var editor = CKEDITOR.instances.editor1; //reference to instanc
+		var data = editor.getData(); //reference to ckeditor data
+		alert (data);
+		$("#editor1").val(data);
+		alert ($("#editor1").val());
+		$.ajax({
+	         type: "GET",
+	         url: "/ebookshop/editor",
+	         data: $('#form7').serialize(),
+	       //  contentType: false,
+	         success: function (data) {
+	             $("#content").html(data);
+	             $('.loading').hide();
+	            
+	         },
+	         //ต้องSetด้วย เพราะตอนนี้มีแค่ Get
+	         error: function (xhr, status, error) {
+	             alert(xhr.responseText);
+	         }
+	     });
+	});
+	
+});
+      </script>  
+

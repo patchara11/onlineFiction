@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel Tutorials</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<style>
+    .loading {
+        background: lightgoldenrodyellow url('{{asset('images/processing.gif')}}') no-repeat center 65%;
+        height: 80px;
+        width: 100px;
+        position: fixed;
+        border-radius: 4px;
+        left: 50%;
+        top: 50%;
+        margin: 0 auto;
+        z-index: 2000;
+        display: none;
+    }
+    
+    .img-center {
+    		display : block;
+    		margin : auto;
+    
+    }
+</style>
+<div class="container-fluid">
+    <div class="row"></div>
+    <div class="row">
+       <!--  <div class="col-md-3"></div> -->
+        <div class="col-md-12">          
+            <div id="content">
+                <div class="container">
+
+        <!-- Heading Row -->
+        <div class="img-center row">
+            <div class="img-center">
+                <img class="img-responsive img-rounded" src="http://i.imgur.com/usrVyHp.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Call to Action Well -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well text-center">
+                    This is a well that is a great spot for a business tagline or phone number for easy access!
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+             <div class="row">
+            		<div class="col-md-4">
+                		<h2>Storyname</h2> 
+                		<ul class="center">
+                			<li><a name="1" href="javascript:ajaxLoad('#')">Act name</a></li>
+                			<li><a name="2" href="javascript:ajaxLoad('#')">Act name</a></li>
+                			<li><a name="3"  href="javascript:ajaxLoad('#')">Act name</a></li>
+                			<li><a name="4" href="javascript:ajaxLoad('#')">Act name</a></li>
+                			<li><a name="5" href="javascript:ajaxLoad('#')">Act name</a></li>
+                		</ul>               
+                
+                		<a class="btn btn-default" href="#">More Info</a>
+            		</div>
+        		</div>
+        <!-- /.row -->
+		</div>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="bootstrap/js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+            
+            
+            
+            </div>
+            <div class="loading"></div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+<!-- JavaScripts -->
+ 	<script src="http://www.tutorialspoint.com/bootstrap/scripts/jquery.min.js">
+        </script>
+ 	 <script src="http://www.tutorialspoint.com/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    function ajaxLoad(filename, content) {
+        content = typeof content !== 'undefined' ? content : 'content';
+     //   $('.loading').show();
+        $.ajax({
+            type: "GET",
+            url: filename,
+          //  contentType: false,
+            success: function (data) {
+                $("#content" ).html(data);
+               
+               
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        });
+        
+    }
+</script>
+</body>
+</html>
